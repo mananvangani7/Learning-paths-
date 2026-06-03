@@ -33,7 +33,7 @@ Build > stage > commit with a quirky message
 
 Merging only when i am satisfied? 
 
-19) git merge 
+18) git merge 
 
 Switch Branch to main > merge with branch name
 
