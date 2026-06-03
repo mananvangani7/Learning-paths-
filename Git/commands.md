@@ -37,3 +37,5 @@ Merging only when i am satisfied?
 
 Switch Branch to main > merge with branch name
 
+
+
