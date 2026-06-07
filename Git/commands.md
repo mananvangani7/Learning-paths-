@@ -57,25 +57,25 @@ Switch Branch to main > merge with branch name
 The entire ideal workflow- [Working Directory] --git add--> [Staging Area] --git commit--> [Repository]
 
 
-To Undo a commit - git revert HEAD - Revert the latest commit
+21) To Undo a commit - git revert HEAD - Revert the latest commit
                    git revert <commit> - Revert a specific commit
 
-To go back to a commit (it is like going back  to a version of the branch that was lets say functional and viable)
-git reset --soft <commit> - Move HEAD to commit, keep changes staged
-git reset --mixed <commit> - Move HEAD to commit, unstage changes (default)
-git reset --hard <commit> - Move HEAD to commit, discard all changes
+22) To go back to a commit (it is like going back  to a version of the branch that was lets say functional and viable)
+    git reset --soft <commit> - Move HEAD to commit, keep changes staged
+    git reset --mixed <commit> - Move HEAD to commit, unstage changes (default)
+    git reset --hard <commit> - Move HEAD to commit, discard all changes
 
-To fix a Mistake in the last commit use amend but only for small things, more like  a flag after git commit
-git commit --amend 
+23) To fix a Mistake in the last commit use amend but only for small things, more like  a flag after git commit
+    git commit --amend 
 
 
-To move or combine multiple commits - Rebase (Just easier commit history)
+24) To move or combine multiple commits - Rebase (Just easier commit history)
 
 
 ![alt text](image.png)
 
-git checkout feature
-git rebase main
+25) git checkout feature
+26) git rebase main
 
 main
 A --- B --- C --- D' --- E'
@@ -88,7 +88,7 @@ just cleaner history with a new commit that just copies D and E into main
 and if Interactive Rebase (Squash)
 A --- B --- C --- D
 
-git rebase -i HEAD~3
+27) git rebase -i HEAD~3
 
 A --- B'
 
@@ -105,12 +105,12 @@ pick B
 A --- C' --- B'
 
 
-To see which commits have been made by you and to find lost commits - 
- git reflog 
+28) To see which commits have been made by you and to find lost commits - 
+    git reflog 
  
-To recover the file found in reflog - 
-if branch - check branch name (from reflog or log --oneline) 
-and git checkout -b branch-name <commit-hash>
-Switched to a new branch 'branch-name'
+29)To recover the file found in reflog - 
+    if branch - check branch name (from reflog or log --oneline) 
+    and git checkout -b branch-name <commit-hash>
+    Switched to a new branch 'branch-name'
 
-if file - git restore filename.txt
+30) if file - git restore filename.txt
