@@ -71,14 +71,8 @@ git commit --amend
 
 To move or combine multiple commits - Rebase (Just easier commit history)
 
-example= 
-main
-A --- B --- C
 
-feature
-      \
-       D --- E
-
+![alt text](image.png)
 
 git checkout feature
 git rebase main
