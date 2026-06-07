@@ -23,9 +23,9 @@ Now the best practice is staging and checking for problems but mostly i can affo
 12) Delete remote tag- git push origin --delete tag v1.0
 13) Difference between staged and in repo-  git diff --staged
 14) Compare Two Commits- git diff <commit1> <commit2>
-15) Show a Branch Graph- git log --graph
+15) Show a Branch Graph- git log --graph or git log --oneline
 16) To create a new branch- git branch
-17) To switch between branches- git checkout 
+17) To switch between branches- git checkout <Branchname(usually main)>
 18) To see what is different from main- git status
 
 Build > stage > commit with a quirky message 
@@ -33,9 +33,75 @@ Build > stage > commit with a quirky message
 
 Merging only when i am satisfied? 
 
-18) git merge 
+19) git merge <Branchname> (after checkingout to main)
 
 Switch Branch to main > merge with branch name
 
+20) Deleting a faulty branch- git branch -d <branchname>
+
+The entire ideal workflow- [Working Directory] --git add--> [Staging Area] --git commit--> [Repository]
 
 
+To Undo a commit - git revert HEAD - Revert the latest commit
+                   git revert <commit> - Revert a specific commit
+
+To go back to a commit (it is like going back  to a version of the branch that was lets say functional and viable)
+git reset --soft <commit> - Move HEAD to commit, keep changes staged
+git reset --mixed <commit> - Move HEAD to commit, unstage changes (default)
+git reset --hard <commit> - Move HEAD to commit, discard all changes
+
+To fix a Mistake in the last commit use amend but only for small things, more like  a flag after git commit
+git commit --amend 
+
+
+To move or combine multiple commits - Rebase (Just easier commit history)
+
+example= 
+main
+A --- B --- C
+
+feature
+      \
+       D --- E
+
+
+git checkout feature
+git rebase main
+
+main
+A --- B --- C --- D' --- E'
+
+D ≠ D'
+E ≠ E'
+
+just cleaner history with a new commit that just copies D and E into main 
+
+and if Interactive Rebase (Squash)
+A --- B --- C --- D
+
+git rebase -i HEAD~3
+
+A --- B'
+
+B' will have C and D in it 
+
+
+Reorder Commits-
+A --- B --- C
+
+pick C
+pick B
+
+
+A --- C' --- B'
+
+
+To see which commits have been made by you and to find lost commits - 
+ git reflog 
+ 
+To recover the file found in reflog - 
+if branch - check branch name (from reflog or log --oneline) 
+and git checkout -b branch-name <commit-hash>
+Switched to a new branch 'branch-name'
+
+if file - git restore filename.txt
