@@ -108,7 +108,7 @@ A --- C' --- B'
 28) To see which commits have been made by you and to find lost commits - 
     git reflog 
  
-29)To recover the file found in reflog - 
+29) To recover the file found in reflog - 
     if branch - check branch name (from reflog or log --oneline) 
     and git checkout -b branch-name <commit-hash>
     Switched to a new branch 'branch-name'
