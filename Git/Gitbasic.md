@@ -114,3 +114,19 @@ A --- C' --- B'
     Switched to a new branch 'branch-name'
 
 30) if file - git restore filename.txt
+
+31) Ignoring some files - if some files dont need to be version controlled, use gitignore- Just go to root and create          
+        file called gitignore by "touch .gitignore"  
+        now in the file just add name of folder that has to be ignored followed by a trailing slash, that folder will be out of version control 
+        starting with a trailing slash would mean it sfor a file inside the folder 
+        starting with **/ the file could be inside any folder 
+        and .extension can be used to put all specific files  with same extension 
+        Wildcards let you match many files or folders at once:
+
+        * matches any number of characters     : *.tmp      # all .tmp files        
+        ? matches a single character           : my?ile.txt # matches my1ile.txt, myAile.txt, etc.      
+        [abc] matches any character in the set :log[0-9].txt # log1.txt, log2.txt, ... log9.txt 
+        [!abc] matches any character not in the set
+        
+        Also ! can be used to not ignore 1 specific file    
+        and in gitignore # can be used to comment and explain why something is ignored 
