@@ -44,4 +44,28 @@
     cd -: Switch to the previous directory
     cd /: Change to the root directory     
     
-       
+    echo
+    -n - Don't add a new line at the end
+    -e - Allow special characters like \n for new lines
+    -E - Don't allow special characters (default)
+
+
+    Cat       
+    cat command is often used with piping to send the content of files to other commands.
+    -n - Add numbers to each line
+    -b - Add numbers only to lines with text
+    -s - Remove extra empty lines
+    -v - Show non-printing characters (except for tabs and end of line)
+    for joining 2 files and writing the contents to a third file - cat file1.txt file2.txt > filemain.txt
+  
+    cp 
+    copy file or files inside a folder
+    best way = cp -r (for recursive inside a folder) -v (verbose so yk what you did) -u (only new files)
+    wildcards- as in git ignore allow for multiple files selected by their identificatin such as extension or starting characters 
+    cp *.txt /destination/ will copy all text files to the destination folder
+
+    
+
+
+
+    
