@@ -103,6 +103,168 @@
     cp *.txt /destination/ will copy all text files to the destination folder
 
 
+   ## mv 
+    used for moving or renaming 
+
+    best use case - move only newer files that are not present in a new folder 
+
+    other use case- 
+
+    -i - Ask before replacing files
+
+    -u - Move only if the source is newer
+
+    -v - Verbose mode, show files being moved
+
+   ## man
+
+    manual for any command
+
+    just by typing man infront of a  command name  
+
+   ## grep
+    
+    to search for text using a pattern 
+
+    grep 'pattern' file.extension
+
+    finds the pattern and prints the line 
+
+    best flag= add -i to ignore case 
+
+    also can be used with regular expression to find specific things 
+
+ ## awk 
+   
+   for manipulating data, getting small overviews, pattern scanning. data extraction from text files 
+
+   example of just printing first column that is seperated by ","
+   awk -F"," '{print $1}' filename.csv
+
+       rators
+       The operators in AWK, in order of decreasing precedence, are:
+
+       (...)       Grouping
+
+       $           Field reference.
+
+       ++ --       Increment and decrement, both prefix and postfix.
+
+       ^           Exponentiation.
+
+       + - !       Unary plus, unary minus, and logical negation.
+
+       * / %       Multiplication, division, and modulus.
+
+       + -         Addition and subtraction.
+
+       space       String concatenation.
+
+       |   |&      Piped I/O for getline, print, and printf.
+
+       < > <= >= == !=
+                   The regular relational operators.
+
+       ~ !~        Regular expression match, negated match.
+
+       in          Array membership.
+
+        &&          Logical AND.
+
+       ||          Logical OR.
+
+       ?:          The  C  conditional  expression.   This has the form expr1 ? expr2 : expr3.  If expr1 is true, the
+                   value of the expression is expr2, otherwise it is expr3.  Only one of expr2 and  expr3  is  evalu‐
+                   ated.
+
+       = += -= *= /= %= ^=
+                   Assignment.   Both absolute assignment (var = value) and operator-assignment (the other forms) are
+                   supported.
+
+ ## cut command
+  Simply extract fields or to see data by passing a delimiter between the text 
+
+  cut -f1 file.txt will show the first column 
+
+  cut -d',' file.txt will show the data with the delimitter of ','
+
+  cut -f1-2 file.txt will show the first columns or fields 
+
+ ## sort 
+
+  -r - Sort in reverse order
+
+  -n - Sort numbers correctly
+
+  -k - Sort by a specific column
+
+  -u - Remove duplicate lines
+
+  -t - Specify a delimiter for fields
+
+  just basically sort lines inside a file on basis of a column or field
+
+  best = sort -t',' -n 
+
+  ( i dont understand how to use column with -k in this at all )
+
+  ## tail 
+
+  to display the last part of a file 
+
+  options/flags 
+
+  -n [number]: Display the last [number] lines of the file.
+
+  -f: Follow the file as it grows, useful for monitoring log files.
+
+  -c [number]: Display the last [number] bytes of the file.
+
+  --pid=[pid]: Terminate after the process with the given PID dies.
+
+  --retry: Keep trying to open a file even if it is inaccessible.
+
+  so best- tail -n 10 -f
+
+
+  # System Monitoring 
+
+  ## Basics for system 
+   
+    1) ps - current processes 
+           -e - Show all processes
+           -f - Show detailed information
+           -u - Show processes for a specific user
+           -a - Show all processes with a terminal
+           -x - Show processes without a terminal 
+
+           so best- ps -ef
+    2) top - all tasks of linux and uses real time monitoring 
+
+            so best- top -d 5
+
+    3) df - disk space usage 
+
+            best- df -ah
+
+    4) du - file space usage
+            
+            best- du -ahsc
+
+    5) free - for checking ram usage 
+           
+            best- free -hgt
+
+    6) uptime and kill [PID]
+   
+    7) ping- to check network connection by sending packets 
+            eg- ping -q google.com
+    
+    8)  
+   
+
+
+
     
 
 
