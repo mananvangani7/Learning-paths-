@@ -10,4 +10,4 @@
            * Example- long division algorithm for finding the quotient of two multiple-digit numbers and Euclid, for finding the greatest common divisor of two positive integers. 
 
 ### Genealogy of computers
-           * gg
+           * 
