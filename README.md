@@ -6,7 +6,10 @@ This is here to reduce my dependency on AI or atleast while I hone my skills and
 # Current Structure- 
     ├──Learn Git
     ├──Learn Bash
-    └──Learn Python 
+    ├──Learn Python
+    └──Learn R for Biologists
+    
+     
      
     
 
@@ -15,4 +18,4 @@ This is here to reduce my dependency on AI or atleast while I hone my skills and
 
 
 # Work Till now 
-  --Git, Bash and Linux 
+  --Basics of python,Git and Bash ongoing 
